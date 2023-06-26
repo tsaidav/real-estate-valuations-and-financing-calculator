@@ -1,4 +1,4 @@
-'''
+  '''
 TITLE:
 Understanding the effect of "age" variable when obtaining mean observed price per unit.
 
@@ -136,6 +136,7 @@ def main():
 
     # Plot the RANSAC Regressor data from our model onto a scatterplot
     plotter(x_age[mask_inliers], y_price[mask_inliers],x_age[mask_outliers], y_price[mask_outliers])
+    plt.title(label='RANSAC Regressor data')
     plt.plot(line_x_age, line_y_price, c='red')
     plt.xlabel('Property Age [age]')
     plt.ylabel('Property Price [house_price_per_unit]')
@@ -143,6 +144,7 @@ def main():
     
     # Plot predicted data from Linear Regression model onto a scatterplot
     plotter(predict_y_training, predict_y_training - y_training,predict_y_testing, predict_y_testing - y_testing)
+    plt.title(label='Linear Regression Predictor')
     plt.xlabel('Predicted value(s)')
     plt.ylabel('Residual(s)')
     plt.hlines(y=0, xmin=0, xmax=60, lw=2, color='red')
