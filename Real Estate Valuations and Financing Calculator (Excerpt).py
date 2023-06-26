@@ -79,7 +79,7 @@ def main():
     #       parameter in which you are reading the csv file from as well as what
     #       each column is referring to
     def read_data():
-        df = pd.read_csv("REDACTED.csv")
+        df = pd.read_csv("real_estate.csv")
         df.columns = ["No", "trade_date", "age", "distance_to_MTR", "number_of_stores", "latitude", "longitude", "house_price_per_unit"]
         return df
     # Call function to read in data objects from the given csv file
